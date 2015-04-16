@@ -1,3 +1,5 @@
+/* Print a talbe of fahrenheit to celsius conversions.  */
+
 #include <stdio.h>
 
 #define LOWER 0
