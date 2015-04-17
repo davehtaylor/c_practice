@@ -9,7 +9,7 @@
 float 
 convert_to_celsius(int fahr_temp)
 {
-    return (5.0/9.0) * (fahr_temp - 32.0);
+    return  (fahr_temp - 32.0) * 5.0 / 9.0;
 }
 
 int 
