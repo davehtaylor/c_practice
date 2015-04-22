@@ -23,11 +23,11 @@ main(void)
         }
         else if (c == NEWLINE)
         {
-            newline_count = 0;
+            newline_count += 1;
         }
         else if (c == SPACE)
         {
-            space_count = 0;
+            space_count += 1;
         }
     }
 
