@@ -1,4 +1,5 @@
-/* Print a talbe of fahrenheit to celsius conversions.  */
+/* Print a talbe of fahrenheit to celsius conversions.  
+ * K&R pg 13.  */
 
 #include <stdio.h>
 
