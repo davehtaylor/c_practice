@@ -30,6 +30,10 @@ main(void)
             space_count += 1;
         }
     }
+    
+    printf("Tabs: %d \n"
+           "Newlines: %d \n"
+           "Spaces: %d \n");
 
     return 0;
 }
