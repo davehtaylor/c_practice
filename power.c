@@ -22,13 +22,13 @@ power(double base, int n)
 int 
 main(void)
 {
-    int usernum;
+    double usernum;
     int userpower;
 
     printf("Enter a number and a power to which to raise that number: ");
-    scanf("%d %d", &usernum, &userpower);
+    scanf("%lf %d", &usernum, &userpower);
 
-    printf("The answer is %d\n", power(usernum, userpower));
+    printf("The answer is %f\n", power(usernum, userpower));
 
     return 0;
 }
