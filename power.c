@@ -1,18 +1,17 @@
 #include <stdio.h>
 
 /* Raise an integer to the nth power.  */
-int 
-power(int base, int n)
+double
+power(double base, int n)
 {
-    int i;
-    int product = base ;
+    double product = base; 
 
     if (n == 0)
     {
         return 1;
     }
 
-    for (i = 1; i != n; i++)
+    for (int i = 1; i < n; i++)
     {
         product *= base;
     }
