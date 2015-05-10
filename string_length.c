@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 int 
-string_len(char input_string[200])
+string_len(char *input_string)
 {
     int i = 0;
 
-    while (input_string[i] != '\n')
+    while (input_string[i] != '\0')
     {
         i++;
     }
@@ -14,7 +14,7 @@ string_len(char input_string[200])
 }
 
 char *
-longer_of_two_strings(char input_string_1[200], char input_string_2[200])
+longer_of_two_strings(char *input_string_1, char *input_string_2)
 {
     if (string_len(input_string_1) > string_len(input_string_2))
     {
