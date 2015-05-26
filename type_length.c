@@ -30,7 +30,7 @@ main(void)
 
     printf("char min is %d\n", CHAR_MIN);
     printf("char max is %d\n", CHAR_MAX);
-    printf("unsigned char max is %d\n", UCHAR_MAX);
+    printf("unsigned char max is %u\n", UCHAR_MAX);
     
     return 0;
 }
