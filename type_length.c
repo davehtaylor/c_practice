@@ -9,16 +9,22 @@ main(void)
     printf("unsigned short max is %d\n", USHRT_MAX);
 
     putchar('\n');
-
-    printf("long min is %d\n", LONG_MIN);
-    printf("long max is %d\n", LONG_MAX);
-    printf("unsigned long max is %d\n", ULONG_MAX);
+    
+    printf("int min is %d\n", INT_MIN);
+    printf("int max is %d\n", INT_MAX);
+    printf("unsigned int max is %u\n", UINT_MAX);
 
     putchar('\n');
 
-    printf("int min is %d\n", INT_MIN);
-    printf("int max is %d\n", INT_MAX);
-    printf("unsigned int max is %d\n", UINT_MAX);
+    printf("long min is %ld\n", LONG_MIN);
+    printf("long max is %ld\n", LONG_MAX);
+    printf("unsigned long max is %lu\n", ULONG_MAX);
+
+    putchar('\n');
+
+    printf("long long min is %lld\n", LLONG_MIN);
+    printf("long long  max is %lld\n", LLONG_MAX);
+    printf("unsigned long long max is %llu\n", ULLONG_MAX);
 
     putchar('\n');
 
