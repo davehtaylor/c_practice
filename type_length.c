@@ -6,7 +6,7 @@ main(void)
 {
     printf("short min is %d\n", SHRT_MIN);
     printf("short max is %d\n", SHRT_MAX);
-    printf("unsigned short max is %d\n", USHRT_MAX);
+    printf("unsigned short max is %u\n", USHRT_MAX);
 
     putchar('\n');
     
@@ -31,6 +31,6 @@ main(void)
     printf("char min is %d\n", CHAR_MIN);
     printf("char max is %d\n", CHAR_MAX);
     printf("unsigned char max is %u\n", UCHAR_MAX);
-    
+
     return 0;
 }
