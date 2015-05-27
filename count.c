@@ -11,9 +11,10 @@ int
 main(void)
 {
 
-    int tab_count = 0;
-    int newline_count = 0;
-    int space_count = 0;
+    char c;
+    unsigned int tab_count = 0;
+    unsigned int newline_count = 0;
+    unsigned int space_count = 0;
 
     while ((c = getchar()) != EOF)
     {
@@ -31,9 +32,9 @@ main(void)
         }
     }
     
-    printf("Tabs: %d \n"
-           "Newlines: %d \n"
-           "Spaces: %d \n");
+    printf("Tabs: %u \n"
+           "Newlines: %u \n"
+           "Spaces: %u \n", tab_count, newline_count, space_count);
 
     return 0;
 }
