@@ -109,6 +109,9 @@ set_zip(Person *person, unsigned int zip)
     person->address.zip = zip;
 }
 
+
+/* ----- Other Functions ----- */
+
 char *
 strip_newline(char *input)
 {
