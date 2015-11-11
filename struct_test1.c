@@ -19,48 +19,54 @@ typedef struct {
     Address address;
 } Person;
 
-void
-set_first_name(Name *user, char *first)
-{
-    strcpy(user->first_name, first);
-}
+/* ----- Struct Getters ----- */
 
-void
-set_last_name(Name *user, char *last)
+char *
+get_first_name(Person *person)
 {
-    strcpy(user->last_name, last);
+    return person->name.first_name;
 }
 
 char *
-get_first_name(Name *user)
+get_last_name(Person *person)
 {
-    return user->first_name;
+    return person->name.last_name;
 }
 
-char *
-get_last_name(Name *user)
+/* ----- Struct Setters ----- */
+
+void
+set_first_name(Person *person, char *first)
 {
-    return user->last_name;
+    strcpy(person->name.first_name, first);
+}
+
+void
+set_last_name(Person *person, char *last)
+{
+    strcpy(person->name.last_name, last);
 }
 
 int
 main(void) 
 {
-    Name user;
+    Person person1;
+    
     char temp1[20];
     char temp2[20];
 
-    printf("Please enter your first name:\n");
+    puts("Please enter your first name:");
     scanf("%s", temp1);
 
-    printf("Please enter your last name:\n");
+    puts("Please enter your last name:");
     scanf("%s", temp2);
-    
-    set_first_name(&user, temp1);
-    set_last_name(&user, temp2);
 
-    printf("Your name is %s %s\n",
-            get_first_name(&user), get_last_name(&user));
+    set_first_name(&person1, temp1);
+    set_last_name(&person1, temp2);
+
+    printf("Your name is %s %s.\n",
+            get_first_name(&person1), get_last_name(&person1));
+
 
     return 0;
 }
