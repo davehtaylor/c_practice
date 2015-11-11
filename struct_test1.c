@@ -109,6 +109,18 @@ set_zip(Person *person, unsigned int zip)
     person->address.zip = zip;
 }
 
+char *
+strip_newline(char *input)
+{
+    unsigned int len = strlen(input);
+
+    if (input[len - 1] == '\n')
+    {
+        input[len - 1] = '\0';
+    }
+
+    return input;
+}
 
 int
 main(void) 
@@ -135,9 +147,11 @@ main(void)
 
     puts("Street number:");
     scanf("%u", &street_num);
+    getchar();
 
     puts("Street name:");
     fgets(street, 40, stdin);
+    strip_newline(street);
 
     puts("City:");
     scanf("%s", city);
