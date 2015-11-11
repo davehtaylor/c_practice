@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
+
+/* ----- Structs ----- */
+
 typedef struct {
     char first_name[20];
     char last_name[20];
@@ -124,6 +127,9 @@ strip_newline(char *input)
 
     return input;
 }
+
+
+/* ----- Main ----- */
 
 int
 main(void) 
