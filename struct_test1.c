@@ -115,6 +115,9 @@ set_zip(Person *person, unsigned int zip)
 
 /* ----- Other Functions ----- */
 
+/* If a string has a newline charcater at the end of it, take it out and
+ * terminate the string in its place.  */
+
 char *
 strip_newline(char *input)
 {
@@ -154,9 +157,17 @@ main(void)
     puts("Last name:");
     scanf("%s", last);
 
+    /* The getchar() here gobbles the newline character left in the in the
+     * input buffer. Without this, the fgets() that follows will get skipped,
+     * and won't be presented to the user. There's probably a better way of
+     * going about that. If I discover one, I will update.  */
+
     puts("Street number:");
     scanf("%u", &street_num);
     getchar();
+
+    /* The strip_newline() function srips out the newline character that the 
+     * fgets() fucntion adds on to the string.  */
 
     puts("Street name:");
     fgets(street, 40, stdin);
