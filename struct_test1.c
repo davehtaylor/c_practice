@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 
@@ -71,13 +72,13 @@ get_zip(Person *person)
 /* ----- Struct Setters ----- */
 
 void
-set_first_name(Person *person, char *first)
+set_first_name(Person *person, const char *first)
 {
     strcpy(person->name.first_name, first);
 }
 
 void
-set_last_name(Person *person, char *last)
+set_last_name(Person *person, const char *last)
 {
     strcpy(person->name.last_name, last);
 }
@@ -89,19 +90,19 @@ set_street_num(Person *person, unsigned int street_num)
 }
 
 void
-set_street(Person *person, char *street)
+set_street(Person *person, const char *street)
 {
     strcpy(person->address.street, street);
 }
 
 void
-set_city(Person *person, char *city)
+set_city(Person *person, const char *city)
 {
     strcpy(person->address.city, city);
 }
 
 void
-set_state(Person *person, char *state)
+set_state(Person *person, const char *state)
 {
     strcpy(person->address.state, state);
 }
@@ -137,8 +138,9 @@ strip_newline(char *input)
 int
 main(void) 
 {
-    Person person1;
-    
+    Person *person1;
+    person1 = (Person *) malloc(sizeof(Person));
+
     char first[20];
     char last[20];
     unsigned int street_num;
@@ -182,21 +184,22 @@ main(void)
     puts("Zip code:");
     scanf("%u", &zip);
 
-    set_first_name(&person1, first);
-    set_last_name(&person1, last);
-    set_street_num(&person1, street_num);
-    set_street(&person1, street);
-    set_city(&person1, city);
-    set_state(&person1, state);
-    set_zip(&person1, zip);
+    set_first_name(person1, first);
+    set_last_name(person1, last);
+    set_street_num(person1, street_num);
+    set_street(person1, street);
+    set_city(person1, city);
+    set_state(person1, state);
+    set_zip(person1, zip);
 
     puts("\nOk, here is your info:\n");
 
-    printf("%s %s\n", get_first_name(&person1), get_last_name(&person1));
-    printf("%u %s\n", get_street_num(&person1), get_street(&person1));
+    printf("%s %s\n", get_first_name(person1), get_last_name(person1));
+    printf("%u %s\n", get_street_num(person1), get_street(person1));
     printf("%s, %s %u\n",
-            get_city(&person1), get_state(&person1), get_zip(&person1));
+            get_city(person1), get_state(person1), get_zip(person1));
 
+    free(person1);
 
     return 0;
 }
