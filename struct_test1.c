@@ -139,7 +139,7 @@ int
 main(void) 
 {
     Person *person1;
-    person1 = (Person *) malloc(sizeof(Person));
+    person1 = malloc(sizeof(Person));
 
     char first[20];
     char last[20];
@@ -149,7 +149,8 @@ main(void)
     char state[20];
     unsigned int zip;
 
-    puts("Let's enter some info about you. Please enter your name and address:");
+    puts("Let's enter some info about you. "
+            "Please enter your name and address:");
    
     putchar('\n');
 
