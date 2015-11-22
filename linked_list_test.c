@@ -9,24 +9,23 @@ struct node {
 void
 print_list(struct node *first)
 {
-    struct node *current = first;
-
-    while (current != NULL)
+    while (first != NULL)
     {
-        printf("%d\n", current->i);
-        current = current->next;
+        printf("%d\n", first->i);
+        first = first->next;
     }
 }
 
 void
 free_list_memory(struct node *first)
 {
-    struct node *current = first;
+    struct node *current;
 
-    while (current != NULL)
+    while (first != NULL)
     {
+        current = first;
+        first = first->next;
         free(current);
-        current = current->next;
     }
 }
 
